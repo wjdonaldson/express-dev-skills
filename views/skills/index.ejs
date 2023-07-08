@@ -3,13 +3,14 @@
 <ul>
   <% skills.forEach((s) => { %>
     <li>
-      <a href="/skills/<%= s.id %>"><%= s.skill %></a>
+      <a href="/skills/<%= s.id %>"><%= s.name %></a>
+      -
+      <%= s.isExpert ? "Expert" : "Not Expert" %>
     </li>
   <% }); %>
 </ul>
 <form action="/skills/new" method="GET">
   <button type="submit">Add Skill</button>
 </form>
-
 
 <%- include('../partials/footer') %>

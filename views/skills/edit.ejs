@@ -1,0 +1,13 @@
+<%- include('../partials/header') %>
+
+<form 
+  action="/skills/<%= skill.id %>?_method=PUT"
+  class="edit-form"
+  method="POST">
+  <input type="text" name="name" value="<%= skill.name %>">
+  <label for="isExpert">Expert</label>
+  <input type="checkbox" name="isExpert" <%= skill.isExpert ? 'checked' : '' %>>
+  <button type="submit">Save Skill</button>
+</form>
+
+<%- include('../partials/footer') %>
