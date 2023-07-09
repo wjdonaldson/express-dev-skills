@@ -1,10 +1,24 @@
 <%- include('../partials/header') %>
 
-<form action="/skills" 
-      method="POST" 
-      autocomplete="off">
-  <input type="text" name="name" autofocus>
-  <button type="submit">Save Skill</button>
-</form>
+<div class="container">
+  <form action="/skills" 
+        method="POST"
+        class="edit-form"
+        autocomplete="off">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name:</label><br>
+      <input type="text" class="form-control" name="name" autofocus>
+    </div>
+    <div class="mb-3">
+      <label for="desc" class="form-label">Description:</label><br>
+      <input type="text" class="form-control" name="desc">
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" name="isExpert">
+      <label class="form-check-label" for="isExpert">Expert</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Save Skill</button>
+  </form>
+</div>
 
 <%- include('../partials/footer') %>

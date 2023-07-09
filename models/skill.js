@@ -1,9 +1,28 @@
 const skills = [
-  { id: 1, name: "HTML", isExpert: false },
-  { id: 2, name: "CSS", isExpert: false },
-  { id: 3, name: "JavaScript", isExpert: false },
-  { id: 4, name: "Node.js", isExpert: false },
-  { id: 5, name: "Express", isExpert: false },
+  { id: 865414, 
+    name: "Time Management", 
+    isExpert: true, 
+    desc: "Time management is the process of planning and exercising conscious control of time spent on specific activities - especially to increase effectiveness, efficiency, and productivity." },
+  { id: 351364, 
+    name: "HTML", 
+    isExpert: false, 
+    desc: "The HyperText Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser." },
+  { id: 265487, 
+    name: "CSS", 
+    isExpert: false, 
+    desc: "Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML." },
+  { id: 332586, 
+    name: "JavaScript", 
+    isExpert: false, 
+    desc: "JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS." },
+  { id: 432561, 
+    name: "Node.js", 
+    isExpert: false, 
+    desc: "Node.js is a cross-platform, open-source server environment that can run on Windows, Linux, Unix, macOS, and more." },
+  { id: 816565, 
+    name: "Express.js", 
+    isExpert: false, 
+    desc: "Express.js, or simply Express, is a back end web application framework for building RESTful APIs with Node.js." },
 ];
 
 module.exports = {
@@ -26,7 +45,7 @@ function getOne(id) {
 
 function create(skill) {
   skill.id = Date.now() % 1000000;
-  skill.isExpert = false;
+  // skill.isExpert = false;
   skills.push(skill);
 }
 

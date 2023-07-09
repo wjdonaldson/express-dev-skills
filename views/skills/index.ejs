@@ -1,16 +1,23 @@
 <%- include('../partials/header') %>
 
-<ul>
-  <% skills.forEach((s) => { %>
-    <li>
-      <a href="/skills/<%= s.id %>"><%= s.name %></a>
-      -
-      <%= s.isExpert ? "Expert" : "Not Expert" %>
-    </li>
-  <% }); %>
-</ul>
-<form action="/skills/new" method="GET">
-  <button type="submit">Add Skill</button>
-</form>
+<div class="container">
+  <div class="row">
+    <% skills.forEach((s) => { %>
+    <div class="card col-lg-6">
+      <div class="card-body">
+        <h5 class="card-title"><%= s.name %></h5>
+        <h6 class="card-subtitle mb-2 text-muted">
+          <%= s.isExpert ? "Expert" : "Not Expert" %>
+        </h6>
+        <p class="card-text"><%= s.desc %></p>
+        <a href="skills/<%= s.id %>" class="card-link">Details</a>
+      </div>
+    </div>
+    <% }); %>
+  </div>
+  <form class="mt-3" action="/skills/new" method="GET">
+    <button class="btn btn-primary" type="submit">Add Skill</button>
+  </form>
+</div>
 
 <%- include('../partials/footer') %>

@@ -5,5 +5,8 @@ var router = express.Router();
 router.get("/", function (req, res, next) {
   res.render("index", { title: "Express Skills Home Page" });
 });
+router.get("/about", function (req, res, next) {
+  res.render("about", { title: "About the Express Skills App" });
+});
 
 module.exports = router;

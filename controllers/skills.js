@@ -34,6 +34,7 @@ function newSkill(req, res) {
 }
 
 function create(req, res) {
+  req.body.isExpert = req.body.isExpert === 'on';
   Skill.create(req.body);
   res.redirect("/skills");
 }

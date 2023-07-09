@@ -1,20 +1,16 @@
-body {
+/* body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: floralwhite;
-}
-
-a {
-  color: #00b7ff;
-}
-
-li {
-  list-style: none;
-}
+} */
 
 button {
   width: 100px;
   border-radius: 5px;
   padding: 10px;
   margin: 5px;
+}
+
+img {
+  width: 100px;
 }
